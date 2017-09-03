@@ -1,9 +1,9 @@
 FROM python:2-alpine
 
-ADD .* /root/
+ADD ../ /root/musicplayer
 
-RUN cd /root/ \
-    && ls -l
+RUN cd /root/musicplayer \
+    && pip2 install -r requirements.txt
 
 WORKDIR /root/musicplayer
 
