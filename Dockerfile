@@ -3,6 +3,7 @@ FROM python:2-alpine
 ADD .* /root/
 
 RUN cd /root/ \
+    && ls -l \
     && pip2 install -r requirements.txt \
     && apk update \
     && apk add git \
